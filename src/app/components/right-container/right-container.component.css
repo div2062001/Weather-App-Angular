@@ -11,22 +11,112 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-size: small;
+    font-weight: bold;
 }
 
 .nav-bar-tabs{
     display: flex;
     flex-direction: row;
     margin-left: 30px;
+    margin-top: 10px;
+
 }
 .today{
     margin-right: 10px;
+    color: #c5c5c5
+}
+
+.today:hover{
+    color:#1a1a1a;
+    cursor: pointer;
+}
+.today-active{
+    color: #1a1a1a;
+}
+
+.week{
+    color:#c5c5c5
+}
+
+.week:hover{
+    color: #1a1a1a;
+    cursor: pointer;
+}
+.week-active{
+    color: #1a1a1a;
+}
+
+
+.underline{
+    width: 43px;
+    height: 1px;
+    background-color: #1a1a1a;
+    margin-top: 1.2rem;
+}
+.underline-today{
+    transform: translate3d(-200%,0,0);
+    transition: 100ms;
+}
+.underline-week{
+    transform: translate3d(-90%,0,0);
+    transition: 100ms;
 }
 
 .nav-bar-metric{
     display: flex;
     flex-direction: row;
     margin-right: 30px;
-    
+    justify-content: center;
+    align-items: center;
+}
+
+.celsius{
+    border-radius: 500px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: small;
+
+}
+.celsius:hover{
+    color: #ffffff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+.celsius-active{
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+.fahrenheit{
+    border-radius: 500px;
+    padding: 5px 7px 5px 7px;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: small;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.fahrenheit:hover{
+    color: #ffffff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+.fahrenheit-active{
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+
+/* css for profile image */
+.profile-image img{
+    width: 30px;
+    height: 35px;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .right-container-data-box{

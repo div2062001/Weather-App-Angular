@@ -1,6 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+
+body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: "Open Sans", sans-serif;
 }
