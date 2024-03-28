@@ -64,18 +64,26 @@
     display: flex;
     flex-direction: column;
 }
+.left-container-temp-img{
+    flex: 2;   
+}
 .left-container-temp-img img{
-    flex: 2;
     width : 160px;
     height: 160px;
-   
 }
-.left-container-temp-value{
+.left-container-temp-value2{
     flex: 1;
-    font-size: large;
+    font-size: 62px;
+    font-weight: normal;
+}
+.left-container-temp-value2 sup{
+    position: relative;
+    top: 3px;
+    font-size: 36px;
 }
 .left-container-day-time{
     flex: 1;
+    font-size: large;
 }
 
 
@@ -86,6 +94,7 @@
     flex-direction: column;
 }
 .left-container-temp-summary{
+    flex: 1;
     display: flex;
     flex-direction: row;
 
@@ -101,6 +110,7 @@
 
 /* Rain status */
 .left-container-rain-status{
+    flex: 1;
     display: flex;
     flex-direction: row;
 
@@ -120,17 +130,21 @@
 
 /* Location name and image */
 .left-container-location-details{
-    display:ruby;
-    
+    flex: 3;
+    text-align: center;
 
 }
 
 .left-container-location-img img{
-    width : 180px;
-    height: 90px;
+    width : 200px;
+    height: 80px;
+    border-radius: 20px;
 
 }
 
 .left-container-location-name{
-
+    margin-top: -55px;
+    font-size: medium;
+    font-weight: bold;
+    color: #ffffff;
 }
