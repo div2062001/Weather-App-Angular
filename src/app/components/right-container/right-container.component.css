@@ -185,8 +185,6 @@
     flex: 10;
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: center;
-    align-items: center; */
 }
 .right-container-todays-highlight-card{
     flex-basis: calc(33.3333% - 20px);
@@ -197,7 +195,6 @@
     border-radius: 10px;
     width: 180px;
     height: 130px;
-    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -207,7 +204,9 @@
     text-align: start;
     font-size: 12px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    align-self: self-start;
 }
 .gauge{
     flex: 2px;
@@ -271,21 +270,83 @@
 /* Second Card */
 .wind-speed-value{
     flex: 2;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500;
     text-align: center;
+    margin-top: -10px;
 }
 .wind-speed-value span{
     font-size: 20px;
     font-weight: 500;
 }
+.wind-speed-value sup{
+    font-size: 20px;
+    font-weight: 500;
+}
 .wind-status-logo{
     flex: 1;
-    margin-right: 35px;
-
+    align-self: self-start;
+    margin-left: 30px;
 }
 .wind-status-logo img{
-    height: 30px;
-    width: 35px;
+    height: 25px;
+    width: 30px;
 
+}
+
+/* third card */
+.sunrise-sunset-value{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+.sunrise{
+    flex: 1;    
+    display: flex;
+    flex-direction: row;
+}
+.sunrise-img{
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.sunrise-img img{
+    height: 30px;
+    width: 30px;
+    
+}
+.sunrise-time{
+    flex: 4;
+    font-weight: 500;
+    font-size: 16px;
+}
+.sunset{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+}
+.sunset-img{
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.sunset-img img{
+    height: 30px;
+    width: 30px;
+}
+.sunset-time{
+    flex: 4;
+    font-weight: 500;
+    font-size: 16px;
+}
+.humidity-summary{
+    font-size: small;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.visibility-summary{
+    font-size: small;
+    font-weight: 500;
+    margin-bottom: 20px;
 }

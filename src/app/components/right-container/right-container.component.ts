@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import { faFaceSmile } from '@fortawesome/free-solid-svg-icons';
+import { faFaceFrown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-right-container',
@@ -6,6 +10,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./right-container.component.css']
 })
 export class RightContainerComponent {
+
+  faThumbsUp:any = faThumbsUp;
+  faThumbsDown:any = faThumbsDown;
+  faFaceSmile : any = faFaceSmile;
+  faFaceFrown:any = faFaceFrown;
 
   today:boolean=false;
   week:boolean = true;
