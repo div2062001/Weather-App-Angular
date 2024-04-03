@@ -1,0 +1,5 @@
+export interface TodayData{
+    time:String;
+    summaryImage:string;
+    temperature:number;
+}
