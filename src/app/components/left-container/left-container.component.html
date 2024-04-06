@@ -1,34 +1,30 @@
 <div class="left-container">
     <div class="left-container-nav-bar">
-    <div class="search-icon"><fa-icon class="fa-xs" [icon]="faMagnifyingGlass"></fa-icon>
+    <div class="search-icon" (click)="onSearch(location.value)"><fa-icon class="fa-xs" [icon]="faMagnifyingGlass"></fa-icon></div>
+    <div class="search-input"><input type="text" placeholder="Search for places ..." #location (keyup.Enter)="onSearch(location.value)"></div>
+    <div class="location-icon" (click)="onSearch(location.value)"><fa-icon class="fa-xs" [icon]="faLocation"></fa-icon>
     </div>
-    <div class="search-input"><input type="text" placeholder="Search for places ..."></div>
-    <div class="location-icon"><fa-icon class="fa-xs" [icon]="faLocation"></fa-icon>
     </div>
-
-    </div>
-
-
 
     <div class="left-container-data-box">
         <div class="left-container-temp-data">
-            <div class="left-container-temp-img"><img src="../../../assets/weather.png" alt=""></div>
-            <div class="left-container-temp-value2">12<sup>°C</sup></div>
-            <div class="left-container-day-time">Monday,<span> 16:00</span></div>
+            <div class="left-container-temp-img"><img src={{this.weatherService.temperatureData.summaryImage}} alt="summaryImage"></div>
+            <div class="left-container-temp-value2">{{this.weatherService.celsius == true ? this.weatherService.temperatureData.temperature : this.weatherService.celsiusToFahrenheit(this.weatherService.temperatureData.temperature)}}<sup>{{this.weatherService.celsius == true ? "°C" : "°F" }}</sup></div>
+            <div class="left-container-day-time">{{this.weatherService.temperatureData.day }},<span> {{this.weatherService.temperatureData.time }}</span></div>
         </div>
         <div class="dividing-line"></div>
         <div class="left-container-other-details">
             <div class="left-container-temp-summary">
                 <div class="left-container-temp-summary-phrase-img"><fa-icon class="fa-xs" style="color: #219ffd;" [icon]="faCloud"></fa-icon></div>
-                <div class="left-container-temp-value">Mostly Cloudy</div>
+                <div class="left-container-temp-value">{{this.weatherService.temperatureData.summaryPhrase}}</div>
             </div>
             <div class="left-container-rain-status">
                 <div class="left-container-rain-status-img"><fa-icon class="fa-xs" style="color: #219ffd;" [icon]="faCloudRain"></fa-icon></div>
-                <div class="left-container-rain-status-value">Rain - 30%</div>
+                <div class="left-container-rain-status-value">Rain - {{this.weatherService.temperatureData.rainPercent}}</div>
             </div>
             <div class="left-container-location-details">
                 <div class="left-container-location-img"><img src="../../../assets/new-york-city-dusk.jpg" alt=""></div>
-                <div class="left-container-location-name">Pune, India</div>
+                <div class="left-container-location-name">{{this.weatherService.temperatureData.location}}</div>
             </div>
         </div>
     </div>

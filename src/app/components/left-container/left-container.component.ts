@@ -11,12 +11,20 @@ import { WeatherService } from 'src/app/service/weather.service';
   styleUrls: ['./left-container.component.css']
 })
 export class LeftContainerComponent {
+[x: string]: any;
+
+  constructor(public weatherService : WeatherService){}
+
   //variables for font awesome icons
   faMagnifyingGlass:any = faMagnifyingGlass;
   faLocation:any = faLocation;
+
   faCloud:any = faCloud;
   faCloudRain:any = faCloudRain;
 
-  constructor(weatherService : WeatherService){}
+  public onSearch(location:string){
+    this.weatherService.cityName = location;
+    this.weatherService.getData();
+  }
 
 }

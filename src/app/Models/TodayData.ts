@@ -1,4 +1,4 @@
-export interface TodayData{
+export class TodayData{
     time:String;
     summaryImage:string;
     temperature:number;
