@@ -40,12 +40,12 @@
                             <div class="gauge_cover"></div>
                         </div>
                     </div>
-                    <div class="right-container-todays-highlight-value">5</div>
+                    <div class="right-container-todays-highlight-value">{{weatherService.todaysHighlight.uvIndex}}</div>
                 </div>
                 <!-- second card -->
                 <div class="right-container-todays-highlight-card">
                     <div class="right-container-todays-highlight-card-title">Wind Status</div>
-                    <div class="wind-speed-value">7.70 <span>km/h</span></div>
+                    <div class="wind-speed-value">{{this.weatherService.todaysHighlight.windStatus}} <span>km/h</span></div>
                 
                     <div class="wind-status-logo"><img src="./../../../assets/wind.png" alt=""></div>
                 </div>
@@ -55,31 +55,31 @@
                     <div class="sunrise-sunset-value">
                         <div class="sunrise">
                             <div class="sunrise-img"><img src="./../../../assets/upload.png" alt=""></div>
-                            <div class="sunrise-time">6:35 AM</div>
+                            <div class="sunrise-time">{{this.weatherService.todaysHighlight.sunrise}} AM</div>
                         </div>
                         <div class="sunset">
                             <div class="sunset-img"><img src="./../../../assets/download.png" alt=""></div>
-                            <div class="sunset-time">5:42 PM</div>
+                            <div class="sunset-time">{{this.weatherService.todaysHighlight.sunset}} PM</div>
                         </div>
                     </div>
                 </div>
                 <!-- card -->
                 <div class="right-container-todays-highlight-card">
                     <div class="right-container-todays-highlight-card-title">Humidity</div>
-                    <div class="wind-speed-value" style="align-self: self-start; margin-left: 20px;">12 <sup>%</sup></div>
-                    <div class="humidity-summary" style="align-self: self-start; margin-left: 20px;">Normal <span><fa-icon class="fa-xs" style="color: #219ffd;" [icon]="faThumbsUp"></fa-icon></span></div>
+                    <div class="wind-speed-value" style="align-self: self-start; margin-left: 20px;">{{this.weatherService.todaysHighlight.humidity }} <sup>%</sup></div>
+                    <div class="humidity-summary" style="align-self: self-start; margin-left: 20px;">{{this.weatherService.todaysHighlight.humidity < 50 ? "Normal":"High"}} <span><fa-icon class="fa-xs" style="color: #219ffd;" [icon]="faThumbsUp"></fa-icon></span></div>
                 </div>
                 <!-- card -->
                 <div class="right-container-todays-highlight-card">
                     <div class="right-container-todays-highlight-card-title">Visibility</div>
-                    <div class="wind-speed-value" style="align-self: self-start; margin-left: 20px;">5.2 <span>km</span></div>
-                    <div class="visibility-summary" style="align-self: self-start; margin-left: 20px;">Average <span><fa-icon class="fa-xs" style="color: #219ffd;" [icon]="faFaceSmile"></fa-icon></span></div>
+                    <div class="wind-speed-value" style="align-self: self-start; margin-left: 20px;">{{this.weatherService.todaysHighlight.visibility}} <span>km</span></div>
+                    <div class="visibility-summary" style="align-self: self-start; margin-left: 20px;">{{this.weatherService.todaysHighlight.visibility > 2 ? "Normal": "Low"}} <span><fa-icon class="fa-xs" style="color: #219ffd;" [icon]="faFaceSmile"></fa-icon></span></div>
                 </div>
                 <!-- card -->
                 <div class="right-container-todays-highlight-card">
                     <div class="right-container-todays-highlight-card-title">Air Quality</div>
-                    <div class="wind-speed-value" style="align-self: self-start; margin-left: 20px;">105</div>
-                    <div class="visibility-summary" style="align-self: self-start; margin-left: 20px;">Unhealthy <span><fa-icon class="fa-xs" style="color: #219ffd;" [icon]="faThumbsDown"></fa-icon></span></div>
+                    <div class="wind-speed-value" style="align-self: self-start; margin-left: 20px;">{{this.weatherService.todaysHighlight.airQuality}}</div>
+                    <div class="visibility-summary" style="align-self: self-start; margin-left: 20px;">{{this.weatherService.todaysHighlight.airQuality < 100 ? "Satisfactory": "Unhealthy"}} <span><fa-icon class="fa-xs" style="color: #219ffd;" [icon]="faThumbsDown"></fa-icon></span></div>
                 </div>
             </div>
         </div>
