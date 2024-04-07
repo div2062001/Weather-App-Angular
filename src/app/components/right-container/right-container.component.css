@@ -251,7 +251,6 @@
     left: 50%;
     transform: translateX(-50%);
 
-    /* Text */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,8 +265,6 @@
     font-weight: 500;
     z-index: 1;
 }
-
-/* Second Card */
 .wind-speed-value{
     flex: 2;
     font-size: 40px;
@@ -291,10 +288,7 @@
 .wind-status-logo img{
     height: 25px;
     width: 30px;
-
 }
-
-/* third card */
 .sunrise-sunset-value{
     flex: 2;
     display: flex;
